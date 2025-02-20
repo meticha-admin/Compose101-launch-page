@@ -29,10 +29,10 @@ function App() {
         }}
       >
         <Hero />
-        <CallToAction />
+{/*         <CallToAction />
         <FeaturesPreview />
         <SocialLinks />
-        <CountdownTimer />
+        <CountdownTimer /> */}
       </motion.div>
     </div>
   )
