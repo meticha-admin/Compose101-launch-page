@@ -1,5 +1,8 @@
+"use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import WildMarquee from "./WildMarquee";
+import { ParticleBackground } from "./ParticleBackground";
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
@@ -7,7 +10,7 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="h-screen flex flex-col justify-center items-center text-center relative overflow-hidden "
+      className="h-screen flex flex-col justify-center items-center text-center relative overflow-hidden"
       variants={{
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -15,8 +18,10 @@ const Hero = () => {
     >
       <motion.div className="absolute inset-0 z-0" style={{ y }}>
         <div className="w-full h-full bg-gradient-to-b from-transparent to-black opacity-50" />
-      <WildMarquee />
       </motion.div>
+      <ParticleBackground />
+
+      <WildMarquee />
       {/* <motion.h1
         className="text-6xl font-bold mb-4 relative z-10"
         variants={{
